@@ -46,7 +46,9 @@ export const chatbot = (state = initialState, action) => {
       messages = [
         ...messages,
         {
-          response: "Something doesn't seem right. Please try again.",
+          response: {
+            message: "Something doesn't seem right. Please try again."
+          },
           type: "bot"
         }
       ];
