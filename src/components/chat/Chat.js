@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
 import { ReactComponent as PaperPlaneIcon } from "../../assets/paper-plane.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis.svg";
+import Messages from "./Messages";
 import "./chat.css";
 
 //  Import action
@@ -31,13 +32,9 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
 
   //  Function that handles user submission
   const handleClick = async e => {
-    // const code = e.keyCode || e.which;
-
-    // if (code === 13) {
     userMessage(message);
     sendMessage(message);
     setMessage("");
-    // }
   };
 
   const handleEnterPress = async e => {
@@ -58,27 +55,7 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
           {/* Handle Messages */}
           <div ref={endOfMessages} className="chat-body">
             <span className="chat-start">Today</span>
-            {!chat.length
-              ? ""
-              : chat.map((msg, index) => (
-                  <div className="chat-wrapper" key={`chat_${index}`}>
-                    <div className={`chat-bubble-${msg.type}`}>
-                      {msg.response.message}
-                    </div>
-                    {msg.response.responseCard &&
-                      msg.response.responseCard.genericAttachments[0].buttons.map(
-                        (button, index) => (
-                          <button
-                            key={`${button.value}_${index}`}
-                            className="chat-btn"
-                            onClick={() => handleBotButton(button)}
-                          >
-                            {button.text}
-                          </button>
-                        )
-                      )}
-                  </div>
-                ))}
+            <Messages chat={chat} handleBotButton={handleBotButton} />
           </div>
           {/* Input Box */}
           <div className="chat-footer">
