@@ -11,6 +11,7 @@ const Messages = ({ chat, handleBotButton }) => {
               <div className={`chat-bubble-${msg.type}`}>
                 {msg.response.message}
               </div>
+              <div className="btn-wrapper">
               {msg.response.responseCard &&
                 msg.response.responseCard.genericAttachments &&
                 msg.response.responseCard.genericAttachments[0].buttons &&
@@ -25,6 +26,8 @@ const Messages = ({ chat, handleBotButton }) => {
                     </button>
                   )
                 )}
+    
+              </div>
               {msg.response.responseCard &&
                 msg.response.responseCard.genericAttachments &&
                 !msg.response.responseCard.genericAttachments[0].buttons && (

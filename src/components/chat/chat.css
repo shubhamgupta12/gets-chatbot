@@ -24,6 +24,7 @@
   height: 30px;
   font-size: 30px;
   padding: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,6 +58,11 @@
   clear: both;
   margin: 0 15px 15px;
 }
+.chat-wrapper .btn-wrapper {
+  float: left;
+  margin-bottom: 1rem;
+}
+
 .chat-wrapper .chat-btn {
   padding: 8px;
   margin: 0 5px 5px 0;

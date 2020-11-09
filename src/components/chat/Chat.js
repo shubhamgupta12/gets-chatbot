@@ -24,6 +24,14 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
 
   useEffect(scrollToBottom, [chat, showBot]);
 
+  // initial msg from bot
+
+  useEffect(() => {
+    sendMessage('what can you do');
+    // eslint-disable-next-line
+  }, []);
+
+
   //Function that sends message when user click button in chat
   const handleBotButton = btnData => {
     userMessage(btnData.text);
