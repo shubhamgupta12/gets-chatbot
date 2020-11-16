@@ -37,7 +37,7 @@
 .chat-body {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 450px;
+  height: 420px;
   scroll-behavior: smooth;
 }
 
@@ -64,13 +64,14 @@
 }
 
 .chat-wrapper .chat-btn {
-  padding: 8px;
+  padding: 5px 8px;
   margin: 0 5px 5px 0;
   border-radius: 5px;
   border: 2px solid #fe6016;
   color: #636161;
   background: #cfd8dc;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .chat-wrapper .chat-btn:hover {
@@ -108,7 +109,6 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 50px;
   overflow: hidden;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -116,7 +116,7 @@
 
 .chat-footer .input {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border: none;
   padding: 10px 20px;
 }
@@ -127,7 +127,7 @@
 
 .chat-footer .chat-send-btn {
   position: absolute;
-  bottom: 10px;
+  bottom: 35px;
   right: 10px;
   border: none;
   background: none;
@@ -142,6 +142,14 @@
   height: 25px;
   width: 25px;
   fill: #f26500;
+}
+
+.chat-footer .chat-tag {
+  padding: 5px 20px;
+  font-size: 10px;
+  text-align: right;
+  background: #000;
+  color: white;
 }
 
 .open-chatbot {
@@ -163,4 +171,8 @@
 }
 .open-chatbot:focus {
   outline: none;
+}
+
+.srijan-link {
+  color: #bbbbc5;
 }

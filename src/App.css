@@ -36,6 +36,7 @@
   clear: both;
   margin-right: 5px;
   float: none !important;
+  cursor: pointer;
   transition: transform 0.2s ease-in-out;
   vertical-align: top;
   padding: 10px 15px;

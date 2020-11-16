@@ -2,3 +2,5 @@ export const INPUT_SUCCESS = "INPUT_SUCCESS";
 export const INPUT_FAIL = "INPUT_FAIL";
 export const MESSAGE_SUCCESS = "MESSAGE_SUCCESS";
 export const MESSAGE_FAIL = "MESSAGE_FAIL";
+export const SET_IFRAME_URL = "SET_IFRAME_URL";
+export const SET_IFRAME_LOADING = "SET_IFRAME_LOADING";

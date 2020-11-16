@@ -27,22 +27,23 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
   // initial msg from bot
 
   useEffect(() => {
-    sendMessage('what can you do');
+    sendMessage("what can you do");
     // eslint-disable-next-line
   }, []);
-
 
   //Function that sends message when user click button in chat
   const handleBotButton = btnData => {
     userMessage(btnData.text);
-    sendMessage(btnData.text);
+    sendMessage(btnData.value);
   };
 
   //  Function that handles user submission
   const handleClick = async e => {
-    userMessage(message);
-    sendMessage(message);
-    setMessage("");
+    if (message) {
+      userMessage(message);
+      sendMessage(message);
+      setMessage("");
+    }
   };
 
   const handleEnterPress = async e => {
@@ -79,10 +80,23 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
             <button className="chat-send-btn" onClick={handleClick}>
               <PaperPlaneIcon />
             </button>
+            <div className="chat-tag">
+              Created by{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.srijan.net/"
+                className="srijan-link"
+              >
+                {" "}
+                Srijan
+              </a>
+              , Powered by AWS
+            </div>
           </div>
         </div>
       )}
-
+      {/* <Modal /> */}
       <button className="open-chatbot" onClick={() => setShowBot(true)}>
         <Ellipsis />
       </button>

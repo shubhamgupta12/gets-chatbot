@@ -3,21 +3,26 @@ import React from "react";
 import "./App.css";
 
 // Import redux components
-import { Provider } from "react-redux";
-import store from "./store";
+import { connect } from "react-redux";
 
 // Import chat component
 import Chat from "./components/chat/Chat";
+import IframeModal from "./components/iframeModal/IframeModal";
 
 // Connect application to redux
-const App = () => {
+const App = ({ iframeUrl }) => {
   return (
-    <Provider store={store}>
-      <div className="container">
-        <Chat />
-      </div>
-    </Provider>
+    <div className="container">
+      <Chat />
+      {iframeUrl && <IframeModal href={iframeUrl} />}
+    </div>
   );
 };
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    iframeUrl: state.iframe.iframeUrl
+  };
+};
+
+export default connect(mapStateToProps)(App);
