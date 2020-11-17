@@ -7,7 +7,7 @@
   background: #cfd8dc;
   border-radius: 10px;
   bottom: 82px;
-  height: 500px;
+  height: 530px;
   bottom: 38px;
   z-index: 9999;
 }
@@ -37,16 +37,15 @@
 .chat-body {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 420px;
+  height: 460px;
   scroll-behavior: smooth;
 }
 
 .chat-container .chat-start {
   padding: 8px 20px;
   display: block;
-  background: #c4c1c1;
+  background: transparent;
   border-radius: 5px;
-  color: #f26500;
   font-family: Arial;
   font-weight: bold;
   font-size: 14px;
@@ -127,7 +126,7 @@
 
 .chat-footer .chat-send-btn {
   position: absolute;
-  bottom: 35px;
+  bottom: 30px;
   right: 10px;
   border: none;
   background: none;

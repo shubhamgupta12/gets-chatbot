@@ -63,7 +63,7 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
           </button>
           {/* Handle Messages */}
           <div ref={endOfMessages} className="chat-body">
-            <span className="chat-start">Today</span>
+            <span className="chat-start"></span>
             <Messages chat={chat} handleBotButton={handleBotButton} />
           </div>
           {/* Input Box */}
