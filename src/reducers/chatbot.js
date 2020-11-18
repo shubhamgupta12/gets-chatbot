@@ -11,7 +11,14 @@ const initialState = {
     {
       response: {
         message:
-          "Hi! We are a community marketplace offering a wide variety of products and services from our trusted vendors and partners."
+          "Hi, I am Gail! I'm here to help you."
+      },
+      type: "bot"
+    },
+    {
+      response: {
+        message:
+          "We are a community marketplace offering a wide variety of products and services from our trusted vendors and partners."
       },
       type: "bot"
     }
