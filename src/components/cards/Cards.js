@@ -29,6 +29,7 @@ class Cards extends React.Component {
                 <div className="footer">
                   <span className="title">{card.title}</span>
                   <span className="subtitle">{card.subTitle}</span>
+                  <button>Buy Now</button>
                 </div>
               </div>
             );

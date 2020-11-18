@@ -44,8 +44,9 @@
 .chat-container .chat-start {
   padding: 8px 20px;
   display: block;
-  background: transparent;
+  background: #c4c1c1;
   border-radius: 5px;
+  color: #f26500;
   font-family: Arial;
   font-weight: bold;
   font-size: 14px;
@@ -85,9 +86,14 @@
 .chat-bubble-bot {
   box-shadow: -1px 5px 16px rgb(0 0 0 / 37%);
   margin: 0 0 15px;
-  padding: 10px 15px;
+  padding: 10px 13px 6px 15px;
   font-size: 14px;
   white-space: pre-wrap;
+}
+.msg-time {
+  text-align: right;
+  font-size: 10px;
+  padding-top: 6px;
 }
 
 .chat-bubble-user {
@@ -99,8 +105,38 @@
 .chat-bubble-bot {
   background: #fff;
   color: #636161;
-  float: left;
   border-radius: 0 10px 10px 10px;
+  max-width: 86%;
+}
+.msg-icon-n-text-bot,
+.msg-icon-n-text-user {
+  display: flex;
+}
+.msg-icon-n-text-bot {
+  float: left;
+}
+.msg-icon-n-text-user {
+  float: right;
+}
+.user-icon {
+  width: 35px;
+  height: 35px;
+  background: #c4c1c1;
+  margin-right: 10px;
+  display: block;
+  border-radius: 50%;
+  background-size: contain;
+}
+.msg-icon-n-text-bot .user-icon {
+  background-image: url("../../assets/bot-icon.svg");
+}
+.msg-icon-n-text-user .user-icon {
+  margin-right: 0px;
+  margin-left: 10px;
+  background-image: url("../../assets/user1.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* ***  Footer  *** */

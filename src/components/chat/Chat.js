@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { connect } from "react-redux";
+import moment from "moment";
 import { ReactComponent as PaperPlaneIcon } from "../../assets/paper-plane.svg";
 import { ReactComponent as Ellipsis } from "../../assets/ellipsis.svg";
 import Messages from "./Messages";
@@ -63,7 +64,7 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
           </button>
           {/* Handle Messages */}
           <div ref={endOfMessages} className="chat-body">
-            <span className="chat-start"></span>
+            <span className="chat-start">{moment().format("MMM Do, YYYY")}</span>
             <Messages chat={chat} handleBotButton={handleBotButton} />
           </div>
           {/* Input Box */}

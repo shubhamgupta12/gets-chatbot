@@ -59,20 +59,22 @@ class Slider extends React.Component {
     const { data } = this.props;
     return (
       <div className="cards-slider">
-        <div className="slider-btns">
-          <button
-            className="slider-btn btn-l"
-            onClick={() => this.handleClick("prev")}
-          >
-            <i className="fa fa-chevron-left" aria-hidden="true"></i>
-          </button>
-          <button
-            className="slider-btn btn-r"
-            onClick={() => this.handleClick("next")}
-          >
-            <i className="fa fa-chevron-right" aria-hidden="true"></i>
-          </button>
-        </div>
+        {data.length > 1 && (
+          <div className="slider-btns">
+            <button
+              className="slider-btn btn-l"
+              onClick={() => this.handleClick("prev")}
+            >
+              <i className="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button
+              className="slider-btn btn-r"
+              onClick={() => this.handleClick("next")}
+            >
+              <i className="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        )}
         <Cards data={data} cardStyle={this.state.cardStyle} />
       </div>
     );
