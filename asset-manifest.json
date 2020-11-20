@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gets-chatbot/static/css/main.c3beedb1.chunk.css",
-    "main.js": "/gets-chatbot/static/js/main.7d5298dd.chunk.js",
-    "main.js.map": "/gets-chatbot/static/js/main.7d5298dd.chunk.js.map",
+    "main.css": "/gets-chatbot/static/css/main.09e46d7a.chunk.css",
+    "main.js": "/gets-chatbot/static/js/main.1e739ab9.chunk.js",
+    "main.js.map": "/gets-chatbot/static/js/main.1e739ab9.chunk.js.map",
     "runtime-main.js": "/gets-chatbot/static/js/runtime-main.c4ee6471.js",
     "runtime-main.js.map": "/gets-chatbot/static/js/runtime-main.c4ee6471.js.map",
-    "static/js/2.3df7091a.chunk.js": "/gets-chatbot/static/js/2.3df7091a.chunk.js",
-    "static/js/2.3df7091a.chunk.js.map": "/gets-chatbot/static/js/2.3df7091a.chunk.js.map",
+    "static/js/2.3ebd7a91.chunk.js": "/gets-chatbot/static/js/2.3ebd7a91.chunk.js",
+    "static/js/2.3ebd7a91.chunk.js.map": "/gets-chatbot/static/js/2.3ebd7a91.chunk.js.map",
     "index.html": "/gets-chatbot/index.html",
-    "static/css/main.c3beedb1.chunk.css.map": "/gets-chatbot/static/css/main.c3beedb1.chunk.css.map",
-    "static/js/2.3df7091a.chunk.js.LICENSE.txt": "/gets-chatbot/static/js/2.3df7091a.chunk.js.LICENSE.txt",
+    "static/css/main.09e46d7a.chunk.css.map": "/gets-chatbot/static/css/main.09e46d7a.chunk.css.map",
+    "static/js/2.3ebd7a91.chunk.js.LICENSE.txt": "/gets-chatbot/static/js/2.3ebd7a91.chunk.js.LICENSE.txt",
     "static/media/chat.css": "/gets-chatbot/static/media/user1.b10bcd1a.svg",
     "static/media/ellipsis.d45d5899.svg": "/gets-chatbot/static/media/ellipsis.d45d5899.svg",
     "static/media/App.css": "/gets-chatbot/static/media/getsph.d24552f5.jpg",
@@ -17,8 +17,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.c4ee6471.js",
-    "static/js/2.3df7091a.chunk.js",
-    "static/css/main.c3beedb1.chunk.css",
-    "static/js/main.7d5298dd.chunk.js"
+    "static/js/2.3ebd7a91.chunk.js",
+    "static/css/main.09e46d7a.chunk.css",
+    "static/js/main.1e739ab9.chunk.js"
   ]
 }
