@@ -11,7 +11,13 @@ const Messages = ({ chat, handleBotButton }) => {
               <div className={`msg-icon-n-text-${msg.type}`}>
                 {msg.type === "bot" && <span className="chat-user-icon" />}
                 <div className={`chat-bubble-${msg.type}`}>
-                  <span>{msg.response.message}</span>
+                  {msg.type === "bot" ? (
+                    <span
+                      dangerouslySetInnerHTML={{ __html: msg.response.message }}
+                    />
+                  ) : (
+                    <span>{msg.response.message}</span>
+                  )}
                   <div className="msg-time">{msg.time}</div>
                 </div>
                 {msg.type === "user" && <span className="chat-user-icon" />}
