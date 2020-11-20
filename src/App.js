@@ -12,7 +12,7 @@ import IframeModal from "./components/iframeModal/IframeModal";
 // Connect application to redux
 const App = ({ iframeUrl }) => {
   return (
-    <div className="container">
+    <div className="chatbot-wrapper">
       <Chat />
       {iframeUrl && <IframeModal href={iframeUrl} />}
     </div>

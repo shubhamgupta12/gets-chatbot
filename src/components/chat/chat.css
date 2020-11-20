@@ -122,7 +122,7 @@
 .msg-icon-n-text-user {
   float: right;
 }
-.user-icon {
+.chat-user-icon {
   width: 35px;
   height: 35px;
   background: #c4c1c1;
@@ -131,10 +131,10 @@
   border-radius: 50%;
   background-size: contain;
 }
-.msg-icon-n-text-bot .user-icon {
+.msg-icon-n-text-bot .chat-user-icon {
   background-image: url("../../assets/bot-icon.svg");
 }
-.msg-icon-n-text-user .user-icon {
+.msg-icon-n-text-user .chat-user-icon {
   margin-right: 0px;
   margin-left: 10px;
   background-image: url("../../assets/user1.svg");

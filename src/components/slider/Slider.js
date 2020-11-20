@@ -58,17 +58,17 @@ class Slider extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <div className="cards-slider">
+      <div className="chat-cards-slider">
         {data.length > 1 && (
           <div className="slider-btns">
             <button
-              className="slider-btn btn-l"
+              className="chat-slider-btn btn-l"
               onClick={() => this.handleClick("prev")}
             >
               <i className="fa fa-chevron-left" aria-hidden="true"></i>
             </button>
             <button
-              className="slider-btn btn-r"
+              className="chat-slider-btn btn-r"
               onClick={() => this.handleClick("next")}
             >
               <i className="fa fa-chevron-right" aria-hidden="true"></i>

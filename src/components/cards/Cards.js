@@ -13,7 +13,7 @@ class Cards extends React.Component {
           {data.map(card => {
             return (
               <div
-                className="card"
+                className="chat-card"
                 id="card"
                 style={this.props.cardStyle}
                 key={card.imageUrl}

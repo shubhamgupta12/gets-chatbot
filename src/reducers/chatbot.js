@@ -1,3 +1,4 @@
+import moment from "moment";
 import {
   INPUT_SUCCESS,
   INPUT_FAIL,
@@ -13,6 +14,7 @@ const initialState = {
         message:
           "Hi, I am Gail! I'm here to help you."
       },
+      time: moment().format("LT"),
       type: "bot"
     },
     {
@@ -20,6 +22,7 @@ const initialState = {
         message:
           "We are a community marketplace offering a wide variety of products and services from our trusted vendors and partners."
       },
+      time: moment().format("LT"),
       type: "bot"
     }
   ]
@@ -33,7 +36,7 @@ export const chatbot = (state = initialState, action) => {
     case INPUT_SUCCESS:
       messages = [
         ...messages,
-        { response: { message: payload }, type: "user" }
+        { response: { message: payload }, time: moment().format("LT"), type: "user" }
       ];
       return {
         ...state,
@@ -44,7 +47,7 @@ export const chatbot = (state = initialState, action) => {
         ...state
       };
     case MESSAGE_SUCCESS:
-      messages = [...messages, { response: payload, type: "bot" }];
+      messages = [...messages, { response: payload, time: moment().format("LT"), type: "bot" }];
       return {
         ...state,
         messages
