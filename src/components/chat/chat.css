@@ -112,6 +112,15 @@
   border-radius: 0 10px 10px 10px;
   max-width: 86%;
 }
+
+.chat-typing {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: flex;
+}
+.chat-typing svg {
+  width: 30px;
+}
 .msg-icon-n-text-bot,
 .msg-icon-n-text-user {
   display: flex;

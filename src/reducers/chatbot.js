@@ -3,7 +3,8 @@ import {
   INPUT_SUCCESS,
   INPUT_FAIL,
   MESSAGE_SUCCESS,
-  MESSAGE_FAIL
+  MESSAGE_FAIL,
+  BOT_MESSAGE_LOADING
 } from "../actions/types";
 
 // Initial state
@@ -11,8 +12,7 @@ const initialState = {
   messages: [
     {
       response: {
-        message:
-          "Hi, I am Gail! I'm here to help you."
+        message: "Hi, I am Gail! I'm here to help you."
       },
       time: moment().format("LT"),
       type: "bot"
@@ -33,10 +33,19 @@ export const chatbot = (state = initialState, action) => {
   const { type, payload } = action;
   let { messages } = state;
   switch (type) {
+    case BOT_MESSAGE_LOADING:
+      return {
+        ...state,
+        botMsgLoading: true
+      };
     case INPUT_SUCCESS:
       messages = [
         ...messages,
-        { response: { message: payload }, time: moment().format("LT"), type: "user" }
+        {
+          response: { message: payload },
+          time: moment().format("LT"),
+          type: "user"
+        }
       ];
       return {
         ...state,
@@ -47,10 +56,14 @@ export const chatbot = (state = initialState, action) => {
         ...state
       };
     case MESSAGE_SUCCESS:
-      messages = [...messages, { response: payload, time: moment().format("LT"), type: "bot" }];
+      messages = [
+        ...messages,
+        { response: payload, time: moment().format("LT"), type: "bot" }
+      ];
       return {
         ...state,
-        messages
+        messages,
+        botMsgLoading: false
       };
     case MESSAGE_FAIL:
       messages = [
@@ -64,7 +77,8 @@ export const chatbot = (state = initialState, action) => {
       ];
       return {
         ...state,
-        messages
+        messages,
+        botMsgLoading: false
       };
     default:
       return {

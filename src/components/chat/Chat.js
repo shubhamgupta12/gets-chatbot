@@ -7,9 +7,9 @@ import Messages from "./Messages";
 import "./chat.css";
 
 //  Import action
-import { userMessage, sendMessage } from "../../actions/chatbot";
+import { userMessage, botMessage } from "../../actions/chatbot";
 
-const Chat = ({ chat, userMessage, sendMessage }) => {
+const Chat = ({ chat, userMessage, botMessage }) => {
   // Handle Users Message
   const [message, setMessage] = useState("");
   const [showBot, setShowBot] = useState(false);
@@ -28,21 +28,21 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
   // initial msg from bot
 
   useEffect(() => {
-    sendMessage("what can you do");
+    botMessage("what can you do");
     // eslint-disable-next-line
   }, []);
 
   //Function that sends message when user click button in chat
   const handleBotButton = btnData => {
     userMessage(btnData.text);
-    sendMessage(btnData.value);
+    botMessage(btnData.value);
   };
 
   //  Function that handles user submission
   const handleClick = async e => {
     if (message) {
       userMessage(message);
-      sendMessage(message);
+      botMessage(message);
       setMessage("");
     }
   };
@@ -64,7 +64,9 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
           </button>
           {/* Handle Messages */}
           <div ref={endOfMessages} className="chat-body">
-            <span className="chat-start">{moment().format("MMM Do, YYYY")}</span>
+            <span className="chat-start">
+              {moment().format("MMM Do, YYYY")}
+            </span>
             <Messages chat={chat} handleBotButton={handleBotButton} />
           </div>
           {/* Input Box */}
@@ -106,7 +108,7 @@ const Chat = ({ chat, userMessage, sendMessage }) => {
 };
 
 const mapStateToProps = state => ({
-  chat: state.chatbot.messages
+  chat: state.chatbot
 });
 
-export default connect(mapStateToProps, { userMessage, sendMessage })(Chat);
+export default connect(mapStateToProps, { userMessage, botMessage })(Chat);
