@@ -2,7 +2,7 @@
   "name": "gets-chatbot",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://shubhamgupta12.github.io/gets-chatbot",
+  "homepage": "http://abk.environet.online/react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.0",
